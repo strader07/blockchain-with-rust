@@ -9,11 +9,11 @@ fn main () {
             outputs: vec![
                 transaction::Output {
                     to_addr: "Alice".to_owned(),
-                    value: 50,
+                    value: 100,
                 },
                 transaction::Output {
                     to_addr: "Bob".to_owned(),
-                    value: 7,
+                    value: 50,
                 },
             ],
         },
@@ -46,11 +46,26 @@ fn main () {
             outputs: vec![
                 transaction::Output {
                     to_addr: "Alice".to_owned(),
-                    value: 36,
+                    value: 30,
                 },
                 transaction::Output {
                     to_addr: "Bob".to_owned(),
-                    value: 12,
+                    value: 40,
+                },
+            ],
+        },
+        Transaction {
+            inputs: vec![
+                blockchain.blocks[0].transactions[0].outputs[1].clone(),
+            ],
+            outputs: vec![
+                transaction::Output {
+                    to_addr: "Alice".to_owned(),
+                    value: 30,
+                },
+                transaction::Output {
+                    to_addr: "Bob".to_owned(),
+                    value: 10,
                 },
             ],
         },
